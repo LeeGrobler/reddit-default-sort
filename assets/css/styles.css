@@ -3,3 +3,13 @@ body {
   padding: 10px;
   font-family: Arial, sans-serif;
 }
+
+/* bootstrap overwrites */
+
+.row {
+  align-items: center;
+}
+
+.col {
+  padding: 0;
+}
