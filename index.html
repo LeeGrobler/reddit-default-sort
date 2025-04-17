@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reddit Default Sort</title>
+
+    <link rel="stylesheet" href="./lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h3>Reddit Default Sort</h3>
+    </header>
+    <main>
+      <!-- home -->
+      <label>
+        Home Feed Sort:
+        <select id="homeSort">
+          <option value="unset">Unset</option>
+          <option value="hot">Hot</option>
+          <option value="new">New</option>
+          <option value="top">Top (All Time)</option>
+          <option value="rising">Rising</option>
+        </select>
+      </label>
+      <label>
+        Enable Home Feed Sorting:
+        <input type="checkbox" id="homeToggle" />
+      </label>
+
+      <!-- subreddit -->
+      <label>
+        Subreddit Sort:
+        <select id="subSort">
+          <option value="unset">Unset</option>
+          <option value="hot">Hot</option>
+          <option value="new">New</option>
+          <option value="top">Top (All Time)</option>
+          <option value="rising">Rising</option>
+        </select>
+      </label>
+      <label>
+        Enable Subreddit Sorting:
+        <input type="checkbox" id="subToggle" />
+      </label>
+
+      <!-- user -->
+      <label>
+        User Page Sort:
+        <select id="userSort">
+          <option value="unset">Unset</option>
+          <option value="hot">Hot</option>
+          <option value="new">New</option>
+          <option value="top">Top (All Time)</option>
+          <option value="rising">Rising</option>
+        </select>
+      </label>
+      <label>
+        Enable User Page Sorting:
+        <input type="checkbox" id="userToggle" />
+      </label>
+
+      <!-- <button id="save">Save Preferences</button>
+      <div id="status"></div> -->
+    </main>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

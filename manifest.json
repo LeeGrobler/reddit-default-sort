@@ -11,7 +11,7 @@
     "*://*.reddit.com/*"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "./index.html"
   },
   "content_scripts": [
     {
@@ -19,7 +19,7 @@
         "*://*.reddit.com/*"
       ],
       "js": [
-        "content.js"
+        "./assets/js/content.js"
       ]
     }
   ]
