@@ -13,53 +13,11 @@
       </header>
 
       <main>
-        <sort-standard></sort-standard>
-
         <!-- home -->
-        <!-- <div class="container text-center mb-4">
-          <div class="row text-start">
-            <div class="col">
-              <label for="homeSort" class="form-label">Home Feed Sort:</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <select id="homeSort" class="form-select">
-                <option value="unset">Unset</option>
-                <option value="hot">Hot</option>
-                <option value="new">New</option>
-                <option value="top">Top (All Time)</option>
-                <option value="rising">Rising</option>
-              </select>
-            </div>
-            <div class="col-1">
-              <input type="checkbox" id="homeToggle" class="form-check-input" />
-            </div>
-          </div>
-        </div> -->
+        <sort-standard section="home" label="Home Feed"></sort-standard>
 
         <!-- subreddit -->
-        <div class="container text-center mb-4">
-          <div class="row text-start">
-            <div class="col">
-              <label for="homeSort" class="form-label">Subreddit Sort:</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <select id="subSort" class="form-select">
-                <option value="unset">Unset</option>
-                <option value="hot">Hot</option>
-                <option value="new">New</option>
-                <option value="top">Top (All Time)</option>
-                <option value="rising">Rising</option>
-              </select>
-            </div>
-            <div class="col-1">
-              <input type="checkbox" id="subToggle" class="form-check-input" />
-            </div>
-          </div>
-        </div>
+        <sort-standard section="sub" label="Subreddit"></sort-standard>
 
         <!-- user -->
         <div class="container text-center mb-4">
