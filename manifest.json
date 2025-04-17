@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Sort Customizer",
+  "version": "1.0",
+  "description": "Set default sort preferences for Reddit home feed, subreddits, and user pages.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.reddit.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.reddit.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
