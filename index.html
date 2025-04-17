@@ -7,61 +7,67 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <header>
-      <h3>Reddit Default Sort</h3>
-    </header>
-    <main>
-      <!-- home -->
-      <label>
-        Home Feed Sort:
-        <select id="homeSort">
-          <option value="unset">Unset</option>
-          <option value="hot">Hot</option>
-          <option value="new">New</option>
-          <option value="top">Top (All Time)</option>
-          <option value="rising">Rising</option>
-        </select>
-      </label>
-      <label>
-        Enable Home Feed Sorting:
-        <input type="checkbox" id="homeToggle" />
-      </label>
+    <div class="container p-3">
+      <header>
+        <h3 class="mb-3">Reddit Default Sort</h3>
+      </header>
 
-      <!-- subreddit -->
-      <label>
-        Subreddit Sort:
-        <select id="subSort">
-          <option value="unset">Unset</option>
-          <option value="hot">Hot</option>
-          <option value="new">New</option>
-          <option value="top">Top (All Time)</option>
-          <option value="rising">Rising</option>
-        </select>
-      </label>
-      <label>
-        Enable Subreddit Sorting:
-        <input type="checkbox" id="subToggle" />
-      </label>
+      <main>
+        <!-- home -->
+        <div class="mb-3">
+          <label for="homeSort" class="form-label">Home Feed Sort:</label>
+          <select id="homeSort" class="form-select">
+            <option value="unset">Unset</option>
+            <option value="hot">Hot</option>
+            <option value="new">New</option>
+            <option value="top">Top (All Time)</option>
+            <option value="rising">Rising</option>
+          </select>
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" id="homeToggle" class="form-check-input" />
+          <label for="homeToggle" class="form-check-label">
+            Enable Home Feed Sorting
+          </label>
+        </div>
 
-      <!-- user -->
-      <label>
-        User Page Sort:
-        <select id="userSort">
-          <option value="unset">Unset</option>
-          <option value="hot">Hot</option>
-          <option value="new">New</option>
-          <option value="top">Top (All Time)</option>
-          <option value="rising">Rising</option>
-        </select>
-      </label>
-      <label>
-        Enable User Page Sorting:
-        <input type="checkbox" id="userToggle" />
-      </label>
+        <!-- subreddit -->
+        <div class="mb-3">
+          <label for="subSort" class="form-label">Subreddit Sort:</label>
+          <select id="subSort" class="form-select">
+            <option value="unset">Unset</option>
+            <option value="hot">Hot</option>
+            <option value="new">New</option>
+            <option value="top">Top (All Time)</option>
+            <option value="rising">Rising</option>
+          </select>
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" id="subToggle" class="form-check-input" />
+          <label for="subToggle" class="form-check-label">
+            Enable Subreddit Sorting
+          </label>
+        </div>
 
-      <!-- <button id="save">Save Preferences</button>
-      <div id="status"></div> -->
-    </main>
+        <!-- user -->
+        <div class="mb-3">
+          <label for="userSort" class="form-label">User Page Sort:</label>
+          <select id="userSort" class="form-select">
+            <option value="unset">Unset</option>
+            <option value="hot">Hot</option>
+            <option value="new">New</option>
+            <option value="top">Top (All Time)</option>
+            <option value="rising">Rising</option>
+          </select>
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" id="userToggle" class="form-check-input" />
+          <label for="userToggle" class="form-check-label">
+            Enable User Page Sorting
+          </label>
+        </div>
+      </main>
+    </div>
 
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/bootstrap.min.js"></script>

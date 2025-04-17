@@ -1,14 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const homeSort = document.getElementById("homeSort");
-  const subSort = document.getElementById("subSort");
-  const userSort = document.getElementById("userSort");
-  const homeToggle = document.getElementById("homeToggle");
-  const subToggle = document.getElementById("subToggle");
-  const userToggle = document.getElementById("userToggle");
-  const saveButton = document.getElementById("save");
-  const status = document.getElementById("status");
-
-  // Load saved preferences
+$(document).ready(() => {
   chrome.storage.local.get(
     [
       "homeSort",
@@ -19,30 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
       "userEnabled",
     ],
     (data) => {
-      homeSort.value = data.homeSort || "hot";
-      subSort.value = data.subSort || "hot";
-      userSort.value = data.userSort || "hot";
-      homeToggle.checked = data.homeEnabled !== false; // Default to enabled
-      subToggle.checked = data.subEnabled !== false;
-      userToggle.checked = data.userEnabled !== false;
+      $("#homeSort").val(data.homeSort || "hot");
+      $("#subSort").val(data.subSort || "hot");
+      $("#userSort").val(data.userSort || "hot");
+      $("#homeToggle").prop("checked", data.homeEnabled !== false);
+      $("#subToggle").prop("checked", data.subEnabled !== false);
+      $("#userToggle").prop("checked", data.userEnabled !== false);
     }
   );
 
-  // Save preferences when the button is clicked
-  saveButton.addEventListener("click", () => {
+  const savePreferences = () => {
     const preferences = {
-      homeSort: homeSort.value,
-      subSort: subSort.value,
-      userSort: userSort.value,
-      homeEnabled: homeToggle.checked,
-      subEnabled: subToggle.checked,
-      userEnabled: userToggle.checked,
+      homeSort: $("#homeSort").val(),
+      subSort: $("#subSort").val(),
+      userSort: $("#userSort").val(),
+      homeEnabled: $("#homeToggle").prop("checked"),
+      subEnabled: $("#subToggle").prop("checked"),
+      userEnabled: $("#userToggle").prop("checked"),
     };
-    chrome.storage.local.set(preferences, () => {
-      status.textContent = "Preferences saved!";
-      setTimeout(() => {
-        status.textContent = "";
-      }, 2000);
-    });
-  });
+    chrome.storage.local.set(preferences);
+  };
+
+  $("#homeSort").on("change", savePreferences);
+  $("#subSort").on("change", savePreferences);
+  $("#userSort").on("change", savePreferences);
+
+  $("#homeToggle").on("change", savePreferences);
+  $("#subToggle").on("change", savePreferences);
+  $("#userToggle").on("change", savePreferences);
 });
